@@ -36,7 +36,7 @@ namespace TEG.CodingChallenge.Business.Manager
         /// <returns></returns>
         public IEnumerable<Event> FetchByVenueId(int venueId)
         {
-            return _eventRepository.Events.Where(e => e.VenueId == venueId);
+            return _eventRepository.Events.Where(e => e.VenueId == venueId).OrderBy(e => e.StartDate);
         }
 
         /// <summary>

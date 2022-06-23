@@ -14,6 +14,15 @@ builder.Services.Configure<ApplicationSettings>(builder.Configuration.GetSection
 // Setup controllers.
 builder.Services.AddControllers();
 
+// Setup CORS.
+builder.Services.AddCors(o =>
+{
+    o.AddPolicy("default", builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -38,6 +47,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("default");
 
 app.MapControllers();
 

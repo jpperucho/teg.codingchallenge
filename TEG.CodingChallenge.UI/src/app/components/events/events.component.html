@@ -1,0 +1,20 @@
+<a href="http://localhost:9000/">Back to home</a>
+
+<h3>Events</h3>
+<select class="form-control-dropdown"  (change)="fetchByVenueId()" [(ngModel)]="selectedVenue">
+    <option *ngFor="let v of venues" [ngValue]="v.id">{{v.name}}</option>
+</select>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Start date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of events">
+            <td><a href="http://localhost:9000/events/{{e.id}}">{{e.name}}</a></td>
+            <td>{{e.startDate | date}}</td>
+        </tr>
+    </tbody>
+</table>

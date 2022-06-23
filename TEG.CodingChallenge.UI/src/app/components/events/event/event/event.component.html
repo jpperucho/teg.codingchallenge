@@ -1,0 +1,26 @@
+<a href="http://localhost:9000/events">Back to events</a>
+<h3>Event</h3>
+<div class="row mb-3">
+    <div class="col">
+        <label>Name</label>
+        <input type="text" value="{{event.name}}" class="form-control" readonly />
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col">
+        <label>Description</label>
+        <input type="text" value="{{event.description}}" class="form-control" readonly />
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col">
+        <label>Start Date</label>
+        <input type="text" value="{{event.startDate | date}}" class="form-control" readonly />
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col">
+        <label>Venue</label>
+        <input type="text" value="{{venueName}}" class="form-control" readonly />
+    </div>
+</div>
