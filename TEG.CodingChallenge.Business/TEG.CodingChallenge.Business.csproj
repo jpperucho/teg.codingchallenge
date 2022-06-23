@@ -7,12 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Manager\" />
-    <Folder Include="Repository\" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TEG.CodingChallenge.Domain\TEG.CodingChallenge.Domain.csproj" />
+    <ProjectReference Include="..\TEG.CodingChallenge.Infrastructure\TEG.CodingChallenge.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
